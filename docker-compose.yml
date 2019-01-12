@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  web-animations:
+    build:
+      context: .
+    ports:
+      - 8080:8080
+    volumes:
+      - ./web-animations:/app/web-animations
+      - node_modules:/app/web-animations/node_modules
+
+volumes:
+  node_modules:
